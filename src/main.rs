@@ -1,6 +1,6 @@
 mod presenter;
 mod repository;
-mod usecase;
+mod service;
 mod controller;
 mod di;
 mod model;
