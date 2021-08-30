@@ -8,8 +8,12 @@ edition = "2018"
 
 [dependencies]
 cargo-edit = "0.7.0"
-tokio = "1.10.0"
 dotenv = "0.15.0"
+chrono = "0.4.19"
+
+[dependencies.tokio]
+version = "1.10.0"
+features = ["full"]
 
 [dependencies.serenity]
 version = "0.10.9"
