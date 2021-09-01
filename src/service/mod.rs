@@ -1,7 +1,9 @@
+mod impls;
+
 use crate::{
     model::Oppai,
-    presenter::types::OppaiAnalysePresenter,
-    repository::types::OppaiRepository
+    presenter::types::{OppaiAnalysePresenter, OppaiAnalysePresenterInput},
+    repository::OppaiRepository
 };
 
 pub struct OppaiRegistryService<R>
@@ -22,17 +24,8 @@ pub struct OppaiAnalyseService<R, P>
 impl<R> OppaiRegistryService<R>
     where R: OppaiRepository
 {
-    fn registry(&self, input: &Oppai) {
-        unimplemented!();
+    pub fn registry(&mut self, input: Oppai) {
+        self.repository.add(input);
     }
 }
 
-impl<R, P> OppaiAnalyseService<R, P>
-    where
-        R: OppaiRepository,
-        P: OppaiAnalysePresenter
-{
-    fn analyse(&self) {
-        unimplemented!();
-    }
-}

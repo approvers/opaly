@@ -2,7 +2,7 @@ use chrono::{DateTime, Utc};
 
 use crate::presenter::types::OppaiAnalysePresenter;
 use crate::service::{OppaiAnalyseService, OppaiRegistryService};
-use crate::repository::types::OppaiRepository;
+use crate::repository::OppaiRepository;
 
 pub struct OppaiController<R, P>
     where
