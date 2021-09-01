@@ -1,10 +1,10 @@
 use chrono::{DateTime, Duration, Utc};
 
 pub trait OppaiAnalysePresenter {
-    fn output(&self);
+    fn output(&self, input: OppaiAnalysePresenterInput);
 }
 
-pub struct OppaiAnalysePresenterOutput {
+pub struct OppaiAnalysePresenterInput {
     latest: DateTime<Utc>,
     total: u64,
     interval_average: Duration,
